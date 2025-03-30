@@ -1,0 +1,12 @@
+<div class="mt-3">
+  <div class="row">
+    @for(post of posts; track post.id){
+    <div class="col-md-4 my-2 mx-0">
+      <div class="card text-bg-info p-5">
+        <h3 class="card-title">{{ post.id }}: {{ post.title }}</h3>
+        <a [routerLink]="['post', post.id]">See Post Details</a>
+      </div>
+    </div>
+    }
+  </div>
+</div>
